@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/css/animation.css";
+
+.splash{
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(50% - 2px);
+  animation-delay: 0.5s;
+}
