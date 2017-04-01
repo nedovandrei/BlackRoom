@@ -1,0 +1,36 @@
+.bg-click{
+  position: absolute;
+  width: calc(100% - 30px);
+  height: 100%;
+  top:0;
+  left:15px;
+  opacity: 0;
+  z-index: 101;
+  & ~ img{
+    transition: transform linear .5s .5s;
+    transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+  }
+
+  &:focus{
+    & ~ img{
+      transition: transform linear .5s .5s;
+      transform: perspective( 400px ) rotate3d(0, 1, 0, 90deg);
+    }
+    & ~ .feedback{
+      transition: transform linear .5s 1s;
+      transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+    }
+  }
+}
+.feedback{
+  transition: transform linear .5s;
+  transform: perspective( 400px ) rotate3d(0, 1, 0, 270deg);
+  // display: none;
+  position: absolute;
+  width: calc(100% - 30px);
+  height: 100%;
+  top:0;
+  left:15px;
+  z-index: 100;
+  background-color: #fff;
+}
